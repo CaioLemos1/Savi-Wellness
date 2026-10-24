@@ -1,0 +1,34 @@
+{
+  "name": "savi-wellness",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page SAVI Wellness — The Art of Feeling Well.",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "check:config": "node scripts/check-config.mjs",
+    "build": "node scripts/check-config.mjs --production && next build && node scripts/generate-headers.mjs",
+    "build:preview": "cross-env SAVI_PREVIEW=1 next build && node scripts/generate-headers.mjs",
+    "serve": "node scripts/serve-static.mjs",
+    "lint": "tsc --noEmit",
+    "audit": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "cross-env": "10.1.0",
+    "postcss": "8.5.31",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3"
+  },
+  "type": "module"
+}
